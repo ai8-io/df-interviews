@@ -11,6 +11,10 @@ echo "Installing backend dependencies..."
 cd backend && uv sync && cd ..
 
 echo ""
+echo "Building shared contracts..."
+cd contracts/typescript && npm install --silent && npx tsc -p tsconfig.json && cd ../..
+
+echo ""
 echo "Installing frontend dependencies..."
 cd frontend && npm install --silent && cd ..
 
