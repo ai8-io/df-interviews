@@ -1,0 +1,19 @@
+{
+  "name": "deepflow-interview-chatbot",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "lint": "npm run lint:fe && npm run lint:be",
+    "lint:fe": "cd frontend && npx tsc --noEmit",
+    "lint:be": "npm run lint:be:ruff && npm run lint:be:ty",
+    "lint:be:ruff": "cd backend && uv run --group dev ruff check --config pyproject.toml src/ ../contracts/python/",
+    "lint:be:ty": "cd backend && uv run --group dev ty check --project src/",
+    "format": "npm run format:fe && npm run format:be",
+    "format:fe": "cd frontend && npx prettier --write 'src/**/*.{ts,tsx,css}'",
+    "format:be": "cd backend && uv run --group dev ruff format src/ ../contracts/python/",
+    "format:check": "npm run format:check:fe && npm run format:check:be",
+    "format:check:fe": "cd frontend && npx prettier --check 'src/**/*.{ts,tsx,css}'",
+    "format:check:be": "cd backend && uv run --group dev ruff format --check src/ ../contracts/python/",
+    "typecheck": "npm run lint:fe && npm run lint:be:ty"
+  }
+}

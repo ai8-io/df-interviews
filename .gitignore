@@ -1,0 +1,15 @@
+# Interviewer-only materials (rubrics, probes, internal alignment — not for candidates)
+**/PLAN.md
+round_2_behavioural.md
+INTERVIEWER_README.md
+
+# Local environments and secrets
+.DS_Store
+**/.venv/
+**/node_modules/
+**/.env
+!**/.env.example
+**/__pycache__/
+*.pyc
+**/dist/
+**/.egg-info/

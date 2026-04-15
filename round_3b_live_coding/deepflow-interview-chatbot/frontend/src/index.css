@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100 text-gray-900;
+}
+
+.prose-chat {
+  @apply text-sm leading-relaxed text-gray-800;
+}
+.prose-chat p {
+  @apply mb-2 last:mb-0;
+}
+.prose-chat strong {
+  @apply font-semibold text-gray-900;
+}
+.prose-chat ul,
+.prose-chat ol {
+  @apply mb-2 ml-4 list-outside last:mb-0;
+}
+.prose-chat ul {
+  @apply list-disc;
+}
+.prose-chat ol {
+  @apply list-decimal;
+}
+.prose-chat li {
+  @apply mb-0.5;
+}
+.prose-chat code {
+  @apply rounded bg-gray-200 px-1.5 py-0.5 font-mono text-xs text-gray-700;
+}
+.prose-chat pre {
+  @apply mb-2 overflow-x-auto rounded-lg bg-gray-800 p-3 last:mb-0;
+}
+.prose-chat pre code {
+  @apply bg-transparent p-0 text-gray-200;
+}
+.prose-chat h1,
+.prose-chat h2,
+.prose-chat h3 {
+  @apply mb-1 mt-3 font-semibold text-gray-900 first:mt-0;
+}
+.prose-chat table {
+  @apply mb-2 w-full text-left text-xs;
+}
+.prose-chat th {
+  @apply border-b border-gray-300 px-2 py-1 font-semibold text-gray-600;
+}
+.prose-chat td {
+  @apply border-b border-gray-200 px-2 py-1;
+}
